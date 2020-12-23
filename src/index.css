@@ -1,0 +1,387 @@
+/* All text families */
+
+@import url("https://fonts.googleapis.com/css2?family=Grenze:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+/* All text families */
+
+/* initial margin padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* outmost div */
+.container {
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+/* page 1 div */
+.page1 {
+  margin: 0 auto;
+  margin-top: 13px;
+  width: 80%;
+  height: 922px;
+  background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
+  position: relative;
+  z-index: 1;
+  border-radius: 4px 4px 0 0;
+}
+
+/* logo styling */
+
+.logo {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+#logoText {
+  color: rgb(0, 0, 0);
+  position: relative;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  font-family: "Lora", serif;
+}
+#logoText::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  width: 48px;
+  top: -4%;
+  transition: all 0.3s ease-in-out;
+}
+#logoText::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  width: 48px;
+  bottom: -4%;
+  right: 1%;
+  transition: all 0.3s ease-in-out;
+}
+
+#logoText:hover {
+  cursor: default;
+}
+#logoText:hover::before {
+  width: 100%;
+}
+#logoText:hover::after {
+  width: 100%;
+}
+
+/* hello botton styling */
+#helloBtn {
+  border: 1px solid #000000;
+  background: none;
+  padding: 5px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+  cursor: pointer;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+  box-shadow: 10px 12px 13px rgba(0, 0, 0, 0.5);
+}
+#helloBtn:hover {
+  color: #fff;
+}
+
+#helloBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101%;
+  background-color: black;
+
+  transform: translateX(-100%);
+
+  transition: all 0.3s ease-out;
+}
+
+#helloBtn:hover::before {
+  transform: translateX(0);
+  z-index: -1;
+}
+/* hello botton styling */
+
+.dropdown {
+  width: 25%;
+  height: 300px;
+  margin: 0px auto;
+
+  border-radius: 4px;
+}
+
+.dropdown > ul > li {
+  color: rgb(0, 0, 0);
+  width: 200px;
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: none;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 0 auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  font-family: "Lora", serif;
+}
+.sub-menu {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  border: 2px solid black;
+  transition: 0.5s;
+  list-style: none;
+  visibility: hidden;
+  font-family: "Lora", serif;
+}
+.dropdown ul > li:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown ul > li:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.intro {
+  text-align: center;
+  /* border: 2px solid black; */
+  width: 60%;
+  margin: 0 auto;
+}
+.intro h1 {
+  font-family: "Lora", serif;
+  margin-bottom: 20px;
+}
+.intro h5 {
+  margin-bottom: 20px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+}
+.intoImg {
+  margin-top: 30px;
+  border-radius: 200px;
+  box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* page 1 div */
+
+/* page 2 div */
+.page2 {
+  top: 0;
+  margin: 0 auto;
+  width: 80%;
+  height: 922px;
+  background-image: linear-gradient(0deg, #14a8d1, #6f33e2);
+  position: relative;
+  z-index: 1;
+}
+.page2Text {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.page2Text h1 {
+  font-family: "Lora", serif;
+}
+.page2Text h5 {
+  margin-top: 30px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
+}
+
+.page2Table {
+  display: flex;
+  justify-content: center;
+}
+.page2Table div {
+  height: 550px;
+  width: 300px;
+  background: none;
+  color: black;
+  text-align: center;
+  margin: 73px 13px 3px 3px;
+  padding: 20px;
+}
+
+.page2Table div img {
+  border-radius: 3px;
+  border: 4px solid black;
+  box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease-in-out;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.page2Table div img:hover {
+  transform: scaleZ(3);
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  box-shadow: 4px 4px rgb(32, 31, 31);
+}
+.page2Table div p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  border: 2px solid white;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.page2Table div h5 {
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+  border: 0.5px solid black;
+  font-size: 1.5rem;
+  margin: 30px;
+}
+
+.toolList {
+  font-size: 1.4rem;
+  list-style: square;
+  margin: 8px;
+  padding-left: 30px;
+  text-align: justify;
+  font-family: "Dosis", sans-serif;
+}
+
+/* page 2 div */
+
+/* page 3 div */
+.page3 {
+  margin: 0 auto;
+  width: 80%;
+  height: 922px;
+  background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
+  border-radius: 0 0 4px 4px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+/* page 3 div */
+
+/* form page styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  height: 550px;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  align-items: center;
+  font-family: "Lora", serif;
+}
+.form label {
+  font-size: 2rem;
+  text-align: center;
+}
+.form input {
+  width: 500px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+.submitBtn {
+  background: none;
+  border: 2px solid black;
+  font-size: 1.3rem;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.txtArea {
+  height: 140px;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 30px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 70%;
+  margin: 20px auto;
+}
+/* form page styling */
