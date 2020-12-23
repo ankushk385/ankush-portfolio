@@ -6,7 +6,6 @@ import logo from "./images/logo.gif";
 import frontEnd from "./images/frontEnd.gif";
 import backEnd from "./images/backEnd.gif";
 import uiux from "./images/uiux.gif";
-import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 function Home() {
   useEffect(() => {
@@ -108,14 +107,14 @@ function Home() {
 
             <div className="page2Table">
               <div className="frontEnd">
-                {" "}
+              
                 <img
                   data-aos="fade-zoom-in"
                   src={frontEnd}
                   alt=""
                   height="230px"
                   width="230px"
-                  alt="...."
+                  
                 />
                 <h5>Front-End</h5>
                 <p>
@@ -137,7 +136,7 @@ function Home() {
                   alt=""
                   height="230px"
                   width="230px"
-                  alt="img"
+                 
                   data-aos="fade-zoom-in"
                 />
                 <h5>UI/UX</h5>
@@ -161,7 +160,7 @@ function Home() {
                   alt=""
                   height="230px"
                   width="230px"
-                  alt="...."
+                  
                 />
                 <h5>Back-End</h5>
                 <p>
