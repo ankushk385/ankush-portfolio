@@ -14,7 +14,7 @@ function Home() {
   const [isToggle, setIsToggle] = useState(true);
 
   const height = useSpring({
-    height: isToggle ? "1px" : "300px",
+    height: isToggle ? "8px" : "300px",
     // border: isToggle ? "0px solid black" : "5px solid black",
     // opacity: isToggle ? "0" : "1",
     margin: isToggle ? "30px" : " 40px",
