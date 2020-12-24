@@ -3,64 +3,55 @@ import { useSpring, animated } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
+import Menu from "./Menu";
+import Page4 from "./Page4";
 import logo from "./images/logo.gif";
 import frontEnd from "./images/frontEnd.gif";
 import backEnd from "./images/backEnd.gif";
 import uiux from "./images/uiux.gif";
-
+// import servicesText from "./images/services.gif";
 // import { NavLink } from "react-router-dom";
 function Home() {
   const [toggle, setToggle] = useState(true);
   const [isToggle, setIsToggle] = useState(true);
 
   const height = useSpring({
-    height: isToggle ? "8px" : "300px",
-    // border: isToggle ? "0px solid black" : "5px solid black",
+    height: isToggle ? "7px" : "300px",
+    color: isToggle ? "black" : "white",
+    // backgroundColor: isToggle ? "black" : "black",
+    // width: isToggle ? "0%" : "100%",
+    display: isToggle ? "flex" : "flex",
+    flexDirection: isToggle ? "row" : "row",
+    justifyContent: isToggle ? "space-between" : "space-between",
+    padding: isToggle ? "0px" : "35px",
+    // border: isToggle ? "0px solid black" : "2px solid black",
     // opacity: isToggle ? "0" : "1",
-    margin: isToggle ? "30px" : " 40px",
-    backgroundColor: isToggle ? "black" : "purple",
+    overflow: isToggle ? "hidden" : "hidden",
+    marginTop: isToggle ? "2px" : " 6px",
+    marginBottom: isToggle ? "100px" : " 15px",
+    backgroundImage: isToggle
+      ? "linear-gradient(135deg, #030200 0%, #6f33e2 100%)"
+      : "linear-gradient(135deg, #2B3436 0%, #6f33e2 100%)",
+    // background: isToggle
+    //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
+    //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
     boxShadow: isToggle
       ? "0px 0px 0px rgba(0, 0, 0, 0.5)"
       : "10px 12px 13px rgba(0, 0, 0, 0.5)",
   });
 
   const fade = useSpring({
-    // opacity: toggle ? 1 : 0.5,
-
-    color: toggle ? "purple" : "white",
-    fontSize: toggle ? "2rem" : "8em",
+    backgroundImage: isToggle
+      ? "linear-gradient(to right, #00dbde 0%, #6a38e1 100%)"
+      : "linear-gradient(to right, #434343 0%, black 100%)",
+    width: isToggle ? "10%" : "100%",
+    marginTop: isToggle ? "2px" : " 6px",
+    color: isToggle ? "black" : "white",
   });
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
-
-  const [fullName, setFullName] = useState({
-    fName: "",
-    email: "",
-  });
-
-  const typedValue = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-
-    setFullName((previousValue) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          email: previousValue.email,
-        };
-      } else if (name === "email") {
-        return { email: value, fName: previousValue.fName };
-      }
-    });
-  };
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    console.log(fullName.fName);
-    console.log(fullName.email);
-  };
 
   return (
     <>
@@ -72,45 +63,23 @@ function Home() {
 
           <div className="page1">
             <div className="logo">
-              <animated.h1 id="logoText" style={fade}>
-                Ankush's Profile
-              </animated.h1>
+              <h1 id="logoText">अंकुश की प्रोफाइल</h1>
               <button id="helloBtn" onClick={() => setToggle(!toggle)}>
                 Say Hi!
               </button>
             </div>
 
-            {/* <div className="dropdown">
-              <ul className="menu">
-                <li>
-                  Menu
-                  <ul className="sub-menu">
-                    <li>
-                      <NavLink to=""> About Me </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to=""> Services </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to=""> Projects </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/contact"> Contact Me </NavLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div> */}
-
             <div className="btnMenu">
-              <button
+              <animated.button
                 className="springBtn"
-                id="helloBtn"
+                style={fade}
                 onClick={() => setIsToggle(!isToggle)}
               >
                 MENU
-              </button>
-              <animated.div style={height}></animated.div>
+              </animated.button>
+              <animated.div style={height}>
+                <Menu />
+              </animated.div>
             </div>
 
             <div className="intro">
@@ -144,7 +113,6 @@ function Home() {
 
             <div className="page2Table">
               <div className="frontEnd">
-                {" "}
                 <img
                   data-aos="slide-right"
                   src={frontEnd}
@@ -212,47 +180,7 @@ function Home() {
           <div className="page3">
             <div className="projector"></div>
           </div>
-          <div className="page4" data-aos="slide-up">
-            <div>
-              <div className="form">
-                <form onSubmit={onSubmit}>
-                  <div className="mb-3">
-                    <label className="form-label">Full Name </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="fName"
-                      onChange={typedValue}
-                      value={fullName.fName}
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">
-                      Your Email Address
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      onChange={typedValue}
-                      value={fullName.email}
-                    />
-                  </div>
-
-                  <div className="form-floating">
-                    <textarea
-                      className="txtArea"
-                      placeholder="Enter Your Message Here"
-                      name="message"
-                    ></textarea>
-                  </div>
-                  <button type="submit" className="submitBtn">
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <Page4 />
         </div>
       </div>
     </>
