@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Grenze:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@600&family=Noto+Sans:wght@700&display=swap");
 /* All text families */
 
 /* initial margin padding */
@@ -25,6 +26,9 @@
   width: 80%;
   height: 922px;
   background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
+  /* background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); */
+  /* background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%); */
+  /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
   position: relative;
   z-index: 1;
   border-radius: 4px 4px 0 0;
