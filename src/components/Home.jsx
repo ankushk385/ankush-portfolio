@@ -16,6 +16,12 @@ function Home() {
   const [toggle, setToggle] = useState(true);
   const [isToggle, setIsToggle] = useState(true);
 
+  const color = useSpring({
+    backgroundImage: isToggle
+      ? "linear-gradient(-45deg, #14a8d1, #6f33e2)"
+      : "linear-gradient(-45deg, #000000, #000000)",
+    color: isToggle ? "black" : "white",
+  });
   const height = useSpring({
     height: isToggle ? "7px" : "300px",
     color: isToggle ? "black" : "white",
@@ -62,7 +68,7 @@ function Home() {
           <div id="stars2"></div>
           <div id="stars3"></div>
 
-          <div className="page1">
+          <animated.div className="page1" style={color}>
             <div className="logo">
               <h1 id="logoText">अंकुश की प्रोफाइल</h1>
               <button id="helloBtn" onClick={() => setToggle(!toggle)}>
@@ -97,8 +103,8 @@ function Home() {
                 alt="...."
               />
             </div>
-          </div>
-          <div className="page2">
+          </animated.div>
+          <animated.div className="page2" style={color}>
             <div className="page2Text" data-aos="zoom-in">
               <h1>These Are The Services I Provide</h1>
 
@@ -177,7 +183,7 @@ function Home() {
                 </ul>
               </div>
             </div>
-          </div>
+          </animated.div>
           <div className="page3">
             <div className="projector"></div>
           </div>
