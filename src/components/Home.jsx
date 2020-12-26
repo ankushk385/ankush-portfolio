@@ -11,6 +11,7 @@ import backEnd from "./images/backEnd.gif";
 import uiux from "./images/uiux.gif";
 // import servicesText from "./images/services.gif";
 // import { NavLink } from "react-router-dom";
+
 function Home() {
   const [toggle, setToggle] = useState(true);
   const [isToggle, setIsToggle] = useState(true);
@@ -20,11 +21,11 @@ function Home() {
     color: isToggle ? "black" : "white",
     // backgroundColor: isToggle ? "black" : "black",
     // width: isToggle ? "0%" : "100%",
-    display: isToggle ? "flex" : "flex",
-    flexDirection: isToggle ? "row" : "row",
-    justifyContent: isToggle ? "space-between" : "space-between",
+    // display: isToggle ? "flex" : "flex",
+    // flexDirection: isToggle ? "row" : "row",
+    // justifyContent: isToggle ? "space-between" : "space-between",
     padding: isToggle ? "0px" : "35px",
-    // border: isToggle ? "0px solid black" : "2px solid black",
+    border: isToggle ? "0px solid black" : "2px solid black",
     // opacity: isToggle ? "0" : "1",
     overflow: isToggle ? "hidden" : "hidden",
     marginTop: isToggle ? "2px" : " 6px",

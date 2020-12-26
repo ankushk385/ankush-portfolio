@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+// import { useTransition, animated } from "react-spring";
 
 function Menu() {
   return (
     <>
       <div className="nav">
-        <h1>menu bar</h1>
-      </div>
-      <div className="nav">
-        <h1>menu bar</h1>
-      </div>
-      <div className="nav">
-        <h1>menu bar</h1>
+        <div>
+          <button>Services</button>
+        </div>
+        <div>
+          <button>Projects</button>
+        </div>
+        <div>
+          <button>Contact Me</button>
+        </div>
       </div>
     </>
   );

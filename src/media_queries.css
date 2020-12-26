@@ -1,0 +1,82 @@
+/* media queries */
+
+/* for mobiles */
+/* 1792x828px at 326ppi */
+@media (max-width: 480px) {
+  #logoText {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  #helloBtn {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .intro h1 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .intro h5 {
+    margin-bottom: 20px;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.2rem;
+  }
+  .intoImg {
+    height: 200px;
+    width: 200px;
+  }
+  .page2Text {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .page2 {
+    height: 1900px;
+  }
+  .page2Table {
+    display: flex;
+    flex-direction: column;
+  }
+  .page2Table div {
+    height: 350px;
+  }
+  .page2Table div img {
+    height: 100px;
+    width: 100px;
+  }
+  .page2Table div h5 {
+    font-size: 1rem;
+  }
+  .page2Table div p {
+    font-size: 0.8rem;
+  }
+  .toolList {
+    font-size: 0.8rem;
+  }
+  .form {
+    width: 300px;
+    height: 550px;
+    overflow: hidden;
+    height: 430px;
+  }
+  .form label {
+    font-size: 1rem;
+  }
+  .form input {
+    font-size: 1rem;
+    width: 200px;
+    margin: 5px auto;
+  }
+  .txtArea {
+    height: 140px;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 3px;
+    margin: 5px auto;
+  }
+  .submitBtn {
+    font-size: 1rem;
+    padding: 10px;
+
+    margin: 5px auto;
+    margin-left: 60px;
+  }
+}

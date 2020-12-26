@@ -297,3 +297,9 @@
   margin: 20px auto;
 }
 /* form page styling */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
