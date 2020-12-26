@@ -26,17 +26,16 @@
   margin-top: 13px;
   width: 80%;
   height: 922px;
-  /* background-image: linear-gradient(-45deg, #14a8d1, #6f33e2, #000000, #000000); */
+  background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
   /* background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); */
   /* background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%); */
   /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
-  position: relative;
+  /* position: relative; */
   background-size: 400%;
   z-index: 1;
   border-radius: 4px 4px 0 0;
-  animation: bganimation 3s ease-in-out infinite alternate;
 }
-@keyframes bganimation {
+/* @keyframes bganimation {
   0% {
     background-position: left;
   }
@@ -44,7 +43,7 @@
   100% {
     background-position: right;
   }
-}
+} */
 
 /* logo styling */
 
@@ -173,10 +172,9 @@
   margin: 0 auto;
   width: 80%;
   height: 922px;
-  /* background-image: linear-gradient(0deg, #14a8d1, #6f33e2); */
-  position: relative;
+  background-image: linear-gradient(0deg, #14a8d1, #6f33e2);
+  /* position: relative; */
   z-index: 1;
-  animation: bganimation 3s ease-in-out infinite alternate;
 }
 .page2Text {
   text-align: center;

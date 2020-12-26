@@ -8,6 +8,8 @@ import Page4 from "./Page4";
 import logo from "./images/logo.gif";
 import frontEnd from "./images/frontEnd.gif";
 import backEnd from "./images/backEnd.gif";
+// import bg1 from "./images/bg1.jpg";
+// import bg2 from "./images/bg2.jpg";
 import uiux from "./images/uiux.gif";
 // import servicesText from "./images/services.gif";
 // import { NavLink } from "react-router-dom";
@@ -21,6 +23,7 @@ function Home() {
       ? "linear-gradient(-45deg, #14a8d1, #6f33e2)"
       : "linear-gradient(-45deg, #000000, #000000)",
     color: isToggle ? "black" : "white",
+    position: isToggle ? "relative" : "inherit",
   });
   const height = useSpring({
     height: isToggle ? "7px" : "300px",
