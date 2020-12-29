@@ -26,7 +26,8 @@
   margin-top: 13px;
   width: 80%;
   height: 922px;
-  background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
+
+  background-image: linear-gradient(0deg, #cf2562, #00acee);
   /* background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); */
   /* background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%); */
   /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
@@ -172,7 +173,7 @@
   margin: 0 auto;
   width: 80%;
   height: 922px;
-  background-image: linear-gradient(0deg, #14a8d1, #6f33e2);
+  background-image: linear-gradient(0deg, #00acee, #cf2562);
   /* position: relative; */
   z-index: 1;
 }
@@ -246,7 +247,7 @@
   margin: 0 auto;
   width: 80%;
   height: 922px;
-  background-image: linear-gradient(0deg, #6f33e2, #14a8d1);
+  background-image: linear-gradient(0deg, #31204a, #00acee);
   border-radius: 0 0 4px 4px;
   position: relative;
   z-index: 1;
@@ -311,5 +312,73 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding: 30px;
+  /* background-color: black; */
+  height: 300px;
+}
+.circle {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background: linear-gradient(#33ccff, #ff0066);
+  border-radius: 50%;
+  color: white;
+  animation: animate 3s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle::after {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  right: 12px;
+  left: 12px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.circle span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#33ccff, #ff0066);
+  border-radius: 50%;
+}
+
+.circle span:nth-child(1) {
+  filter: blur(3px);
+}
+.circle span:nth-child(2) {
+  filter: blur(9px);
+}
+.circle span:nth-child(3) {
+  filter: blur(13px);
+}
+.circle span:nth-child(4) {
+  filter: blur(15px);
+}
+.cirtext button {
+  border: 2px solid #ff0066;
+  background: none;
+  color: white;
+  padding: 8px;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.cirtext button:hover {
+  background-color: #ff0066;
 }

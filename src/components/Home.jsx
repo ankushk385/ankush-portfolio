@@ -19,29 +19,23 @@ function Home() {
   const [isToggle, setIsToggle] = useState(true);
 
   const color = useSpring({
-    backgroundImage: isToggle
-      ? "linear-gradient(-45deg, #14a8d1, #6f33e2)"
-      : "linear-gradient(-45deg, #000000, #000000)",
-    color: isToggle ? "black" : "white",
-    position: isToggle ? "relative" : "inherit",
+    // color: isToggle ? "black" : "white",
+    position: isToggle ? "relative" : "relative",
   });
   const height = useSpring({
     height: isToggle ? "7px" : "300px",
-    color: isToggle ? "black" : "white",
-    // backgroundColor: isToggle ? "black" : "black",
+
+    backgroundColor: isToggle ? "black" : "black",
     // width: isToggle ? "0%" : "100%",
     // display: isToggle ? "flex" : "flex",
     // flexDirection: isToggle ? "row" : "row",
     // justifyContent: isToggle ? "space-between" : "space-between",
-    padding: isToggle ? "0px" : "35px",
-    border: isToggle ? "0px solid black" : "2px solid black",
+    // padding: isToggle ? "0px" : "35px",
+    // border: isToggle ? "0px solid black" : "2px solid black",
     // opacity: isToggle ? "0" : "1",
     overflow: isToggle ? "hidden" : "hidden",
-    marginTop: isToggle ? "2px" : " 6px",
-    marginBottom: isToggle ? "100px" : " 15px",
-    backgroundImage: isToggle
-      ? "linear-gradient(135deg, #030200 0%, #6f33e2 100%)"
-      : "linear-gradient(135deg, #2B3436 0%, #6f33e2 100%)",
+    // marginTop: isToggle ? "2px" : " 6px",
+    // marginBottom: isToggle ? "100px" : " 15px",
     // background: isToggle
     //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
     //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
@@ -52,7 +46,7 @@ function Home() {
 
   const fade = useSpring({
     backgroundImage: isToggle
-      ? "linear-gradient(to right, #00dbde 0%, #6a38e1 100%)"
+      ? "linear-gradient(to right, #00dbde 0%, #ff0066 100%)"
       : "linear-gradient(to right, #434343 0%, black 100%)",
     width: isToggle ? "10%" : "100%",
     marginTop: isToggle ? "2px" : " 6px",
@@ -88,6 +82,7 @@ function Home() {
                 MENU
               </animated.button>
               <animated.div style={height}>
+                <div id="stars"></div>
                 <Menu />
               </animated.div>
             </div>

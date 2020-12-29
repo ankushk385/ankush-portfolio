@@ -1,18 +1,37 @@
 import React from "react";
+
 // import { useTransition, animated } from "react-spring";
 
 function Menu() {
   return (
     <>
       <div className="nav">
-        <div>
+        <div className="cirtext">
+          <button>About Me</button>
+          <div className="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div className="cirtext">
           <button>Services</button>
+          <div className="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <div>
+        <div className="cirtext">
           <button>Projects</button>
-        </div>
-        <div>
-          <button>Contact Me</button>
+          <div className="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </>
