@@ -8,8 +8,7 @@ import Page4 from "./Page4";
 import logo from "./images/logo.gif";
 import frontEnd from "./images/frontEnd.gif";
 import backEnd from "./images/backEnd.gif";
-// import bg1 from "./images/bg1.jpg";
-// import bg2 from "./images/bg2.jpg";
+
 import uiux from "./images/uiux.gif";
 // import servicesText from "./images/services.gif";
 // import { NavLink } from "react-router-dom";
@@ -82,7 +81,6 @@ function Home() {
                 MENU
               </animated.button>
               <animated.div style={height}>
-                <div id="stars"></div>
                 <Menu />
               </animated.div>
             </div>
