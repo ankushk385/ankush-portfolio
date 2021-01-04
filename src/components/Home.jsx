@@ -3,13 +3,14 @@ import { useSpring, animated } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import Page4 from "./Page4";
 import logo from "./images/logo.gif";
 import frontEnd from "./images/frontEnd.gif";
 import backEnd from "./images/backEnd.gif";
 
 import uiux from "./images/uiux.gif";
+import { ReactComponent as MenuIcon } from "./images/menuicon.svg";
 // import servicesText from "./images/services.gif";
 // import { NavLink } from "react-router-dom";
 
@@ -18,30 +19,28 @@ function Home() {
   const [isToggle, setIsToggle] = useState(true);
 
   const color = useSpring({
-    // color: isToggle ? "black" : "white",
     position: isToggle ? "relative" : "relative",
   });
-  const height = useSpring({
-    height: isToggle ? "7px" : "300px",
+  // const height = useSpring({
+  //   height: isToggle ? "7px" : "300px",
 
-    backgroundColor: isToggle ? "black" : "black",
-    // width: isToggle ? "0%" : "100%",
-    // display: isToggle ? "flex" : "flex",
-    // flexDirection: isToggle ? "row" : "row",
-    // justifyContent: isToggle ? "space-between" : "space-between",
-    // padding: isToggle ? "0px" : "35px",
-    // border: isToggle ? "0px solid black" : "2px solid black",
-    // opacity: isToggle ? "0" : "1",
-    overflow: isToggle ? "hidden" : "hidden",
-    // marginTop: isToggle ? "2px" : " 6px",
-    // marginBottom: isToggle ? "100px" : " 15px",
-    // background: isToggle
-    //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
-    //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
-    boxShadow: isToggle
-      ? "0px 0px 0px rgba(0, 0, 0, 0.5)"
-      : "10px 12px 13px rgba(0, 0, 0, 0.5)",
-  });
+  //   // width: isToggle ? "0%" : "100%",
+  //   // display: isToggle ? "flex" : "flex",
+  //   // flexDirection: isToggle ? "row" : "row",
+  //   // justifyContent: isToggle ? "space-between" : "space-between",
+  //   // padding: isToggle ? "0px" : "35px",
+  //   // border: isToggle ? "0px solid black" : "2px solid black",
+  //   // opacity: isToggle ? "0" : "1",
+  //   overflow: isToggle ? "hidden" : "hidden",
+  //   // marginTop: isToggle ? "2px" : " 6px",
+  //   // marginBottom: isToggle ? "100px" : " 15px",
+  //   // background: isToggle
+  //   //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
+  //   //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
+  //   boxShadow: isToggle
+  //     ? "0px 0px 0px rgba(0, 0, 0, 0.5)"
+  //     : "10px 12px 13px rgba(0, 0, 0, 0.5)",
+  // });
 
   const fade = useSpring({
     backgroundImage: isToggle
@@ -53,7 +52,7 @@ function Home() {
   });
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
   }, []);
 
   return (
@@ -64,7 +63,7 @@ function Home() {
           <div id="stars2"></div>
           <div id="stars3"></div>
 
-          <animated.div className="page1" style={color}>
+          <div className="page1" style={color} data-aos="fade-in">
             <div className="logo">
               <h1 id="logoText">अंकुश की प्रोफाइल</h1>
               <button id="helloBtn" onClick={() => setToggle(!toggle)}>
@@ -72,18 +71,11 @@ function Home() {
               </button>
             </div>
 
-            <div className="btnMenu">
-              <animated.button
-                className="springBtn"
-                style={fade}
-                onClick={() => setIsToggle(!isToggle)}
-              >
-                MENU
-              </animated.button>
-              <animated.div style={height}>
-                <Menu />
-              </animated.div>
-            </div>
+            <Navbar>
+              <NavItem icon={<MenuIcon />}>
+                <p>hello bitches</p>
+              </NavItem>
+            </Navbar>
 
             <div className="intro">
               <h1>Hi my name is Ankush welcome to my website</h1>
@@ -99,8 +91,8 @@ function Home() {
                 alt="...."
               />
             </div>
-          </animated.div>
-          <animated.div className="page2" style={color}>
+          </div>
+          <animated.div className="page2" style={color} data-aos="fade-in">
             <div className="page2Text" data-aos="zoom-in">
               <h1>These Are The Services I Provide</h1>
 
@@ -186,6 +178,32 @@ function Home() {
           <Page4 />
         </div>
       </div>
+    </>
+  );
+}
+
+// -----------------------------------------------------------------------------------
+
+function Navbar(props) {
+  return (
+    <>
+      <nav className="navbar">
+        <ul className="navbar-nav">{props.children}</ul>
+      </nav>
+    </>
+  );
+}
+function NavItem(props) {
+  const [menu, setMenu] = useState(false);
+
+  return (
+    <>
+      <li className="nav-item">
+        <a href="#" className="icon-button" onClick={() => setMenu(!menu)}>
+          {props.icon}
+        </a>
+        {menu && props.children}
+      </li>
     </>
   );
 }
