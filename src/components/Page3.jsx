@@ -1,10 +1,11 @@
 import React from "react";
+import "./css/page3.css";
 
 function Page3() {
   return (
     <>
-      <div className="nav">
-        <h1>page 3</h1>
+      <div className="project-section">
+        <h1>My Projects</h1>
       </div>
     </>
   );

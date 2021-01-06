@@ -1,26 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import React, { useEffect } from "react";
+// import { useSpring, animated } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
-// import Menu from "./Menu";
+import { Navbar, NavItem, DropdownMenu } from "./Menu";
+import Page3 from "./Page3";
 import Page4 from "./Page4";
-import logo from "./images/logo.gif";
-import frontEnd from "./images/frontEnd.gif";
-import backEnd from "./images/backEnd.gif";
+import logo from "./images/logo2.gif";
+import frontEnd from "./images/frontEnd2.gif";
+import backEnd from "./images/backEnd2.gif";
 
-import uiux from "./images/uiux.gif";
+import uiux from "./images/uiux2.gif";
 import { ReactComponent as MenuIcon } from "./images/menuicon.svg";
-// import servicesText from "./images/services.gif";
-// import { NavLink } from "react-router-dom";
 
 function Home() {
-  const [toggle, setToggle] = useState(true);
-  const [isToggle, setIsToggle] = useState(true);
+  // const [toggle, setToggle] = useState(true);
+  // const [isToggle, setIsToggle] = useState(true);
 
-  const color = useSpring({
-    position: isToggle ? "relative" : "relative",
-  });
+  // const color = useSpring({
+  //   position: isToggle ? "relative" : "relative",
+  // });
   // const height = useSpring({
   //   height: isToggle ? "7px" : "300px",
 
@@ -42,14 +41,14 @@ function Home() {
   //     : "10px 12px 13px rgba(0, 0, 0, 0.5)",
   // });
 
-  const fade = useSpring({
-    backgroundImage: isToggle
-      ? "linear-gradient(to right, #00dbde 0%, #ff0066 100%)"
-      : "linear-gradient(to right, #434343 0%, black 100%)",
-    width: isToggle ? "10%" : "100%",
-    marginTop: isToggle ? "2px" : " 6px",
-    color: isToggle ? "black" : "white",
-  });
+  // const fade = useSpring({
+  //   // backgroundImage: isToggle
+  //   //   ? "linear-gradient(to right, #00dbde 0%, #ff0066 100%)"
+  //   //   : "linear-gradient(to right, #434343 0%, black 100%)",
+  //   // width: isToggle ? "10%" : "100%",
+  //   // marginTop: isToggle ? "2px" : " 6px",
+  //   // color: isToggle ? "black" : "white",
+  // });
 
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
@@ -63,17 +62,15 @@ function Home() {
           <div id="stars2"></div>
           <div id="stars3"></div>
 
-          <div className="page1" style={color} data-aos="fade-in">
+          <div className="page1" data-aos="fade-in">
             <div className="logo">
               <h1 id="logoText">अंकुश की प्रोफाइल</h1>
-              <button id="helloBtn" onClick={() => setToggle(!toggle)}>
-                Say Hi!
-              </button>
+              <button id="helloBtn">Say Hi!</button>
             </div>
 
             <Navbar>
               <NavItem icon={<MenuIcon />}>
-                <p>hello bitches</p>
+                <DropdownMenu />
               </NavItem>
             </Navbar>
 
@@ -92,7 +89,7 @@ function Home() {
               />
             </div>
           </div>
-          <animated.div className="page2" style={color} data-aos="fade-in">
+          <div className="page2">
             <div className="page2Text" data-aos="zoom-in">
               <h1>These Are The Services I Provide</h1>
 
@@ -123,10 +120,9 @@ function Home() {
                 <h5>Tools I Use</h5>
                 <ul className="toolList">
                   <li>React Js</li>
-                  <li>Css</li>
-                  <li>Scss</li>
-                  <li>Bootstrap</li>
-                  <li>Material Ui</li>
+                  <li>Css/Scss</li>
+
+                  <li>Bootstrap/Material Ui</li>
                 </ul>
               </div>
               <div className="uiux">
@@ -171,41 +167,14 @@ function Home() {
                 </ul>
               </div>
             </div>
-          </animated.div>
-          <div className="page3">
-            <div className="projector"></div>
           </div>
+
+          <Page3 />
+
           <Page4 />
         </div>
       </div>
     </>
   );
 }
-
-// -----------------------------------------------------------------------------------
-
-function Navbar(props) {
-  return (
-    <>
-      <nav className="navbar">
-        <ul className="navbar-nav">{props.children}</ul>
-      </nav>
-    </>
-  );
-}
-function NavItem(props) {
-  const [menu, setMenu] = useState(false);
-
-  return (
-    <>
-      <li className="nav-item">
-        <a href="#" className="icon-button" onClick={() => setMenu(!menu)}>
-          {props.icon}
-        </a>
-        {menu && props.children}
-      </li>
-    </>
-  );
-}
-
 export default Home;

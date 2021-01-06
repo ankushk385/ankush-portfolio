@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/page4.css";
 function Page4() {
   const [fullName, setFullName] = useState({
     fName: "",
