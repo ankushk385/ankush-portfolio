@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-// import { useSpring, animated } from "react-spring";
+import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
@@ -15,31 +15,30 @@ import { ReactComponent as MenuIcon } from "./images/menuicon.svg";
 
 function Home() {
   // const [toggle, setToggle] = useState(true);
-  // const [isToggle, setIsToggle] = useState(true);
+  const [isToggle, setIsToggle] = useState(true);
 
   // const color = useSpring({
   //   position: isToggle ? "relative" : "relative",
   // });
-  // const height = useSpring({
-  //   height: isToggle ? "7px" : "300px",
-
-  //   // width: isToggle ? "0%" : "100%",
-  //   // display: isToggle ? "flex" : "flex",
-  //   // flexDirection: isToggle ? "row" : "row",
-  //   // justifyContent: isToggle ? "space-between" : "space-between",
-  //   // padding: isToggle ? "0px" : "35px",
-  //   // border: isToggle ? "0px solid black" : "2px solid black",
-  //   // opacity: isToggle ? "0" : "1",
-  //   overflow: isToggle ? "hidden" : "hidden",
-  //   // marginTop: isToggle ? "2px" : " 6px",
-  //   // marginBottom: isToggle ? "100px" : " 15px",
-  //   // background: isToggle
-  //   //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
-  //   //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
-  //   boxShadow: isToggle
-  //     ? "0px 0px 0px rgba(0, 0, 0, 0.5)"
-  //     : "10px 12px 13px rgba(0, 0, 0, 0.5)",
-  // });
+  const height = useSpring({
+    // height: isToggle ? "7px" : "300px",
+    // width: isToggle ? "0%" : "100%",
+    // display: isToggle ? "flex" : "flex",
+    // flexDirection: isToggle ? "row" : "row",
+    // justifyContent: isToggle ? "space-between" : "space-between",
+    // padding: isToggle ? "0px" : "35px",
+    // border: isToggle ? "0px solid black" : "2px solid black",
+    // opacity: isToggle ? "0" : "1",
+    // overflow: isToggle ? "hidden" : "hidden",
+    marginTop: isToggle ? "50px" : " 256px",
+    // marginBottom: isToggle ? "100px" : " 15px",
+    // background: isToggle
+    //   ? "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
+    //   : "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)",
+    // boxShadow: isToggle
+    //   ? "0px 0px 0px rgba(0, 0, 0, 0.5)"
+    //   : "10px 12px 13px rgba(0, 0, 0, 0.5)",
+  });
 
   // const fade = useSpring({
   //   // backgroundImage: isToggle
@@ -69,12 +68,14 @@ function Home() {
             </div>
 
             <Navbar>
-              <NavItem icon={<MenuIcon />}>
+              <NavItem
+                icon={<MenuIcon onClick={() => setIsToggle(!isToggle)} />}
+              >
                 <DropdownMenu />
               </NavItem>
             </Navbar>
 
-            <div className="intro">
+            <animated.div className="intro" style={height}>
               <h1>Hi my name is Ankush welcome to my website</h1>
               <h5>
                 I design and code beautifully simple things, and I love what I
@@ -87,7 +88,7 @@ function Home() {
                 width="300px"
                 alt="...."
               />
-            </div>
+            </animated.div>
           </div>
           <div className="page2">
             <div className="page2Text" data-aos="zoom-in">

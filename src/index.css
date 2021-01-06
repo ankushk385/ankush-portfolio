@@ -121,7 +121,7 @@
 .intro {
   text-align: center;
   width: 60%;
-  margin: 270px auto;
+  margin: 0px auto;
 }
 .intro h1 {
   font-family: "Lora", serif;
@@ -148,7 +148,7 @@
   width: 80%;
   height: 922px;
   background-image: linear-gradient(0deg, #00acee, #cf2562);
-  /* position: relative; */
+  position: relative;
   z-index: 1;
 }
 .page2Text {
