@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import "./css/page3.css";
 import img from "./images/logo.gif";
-import { TimelineLite, Power2 } from "gsap";
-import CSSRulePluglin from "gsap/CSSRulePlugin";
+import gsap, { TimelineLite, Power2 } from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+gsap.registerPlugin(CSSRulePlugin);
+
 function Page3() {
   let card = useRef(null);
   let card2 = useRef(null);
   let card3 = useRef(null);
-  let cardBefore = CSSRulePluglin.getRule(".project-card::before");
-  let cardAfter = CSSRulePluglin.getRule(".project-card::after");
+  let cardBefore = CSSRulePlugin.getRule(".project-card::before");
+  let cardAfter = CSSRulePlugin.getRule(".project-card::after");
   let para = useRef(null);
   let title = useRef(null);
   let para2 = useRef(null);
@@ -18,8 +20,8 @@ function Page3() {
   let image = useRef(null);
   let tl = new TimelineLite();
   useEffect(() => {
-    tl.to(cardBefore, 0.3, { width: "100%", ease: Power2.easeIn })
-      .to(cardAfter, 0.3, { width: "100%", ease: Power2.easeIn })
+    tl.to([cardBefore, cardAfter], 0.3, { width: "100%", ease: Power2.easeIn })
+
       .to([title, title2, title3], 0.5, { color: "white", marginTop: "0px" })
       .to(image, 0.3, {
         opacity: "1",
@@ -47,15 +49,15 @@ function Page3() {
     // card.addEventListener("mouseleave", () => {
     //   tl.reverse();
     // });
-    card2.addEventListener("mouseenter", () => {
-      tl.play();
-    });
+    // card2.addEventListener("mouseenter", () => {
+    //   tl.play();
+    // });
     // card2.addEventListener("mouseleave", () => {
     //   tl.reverse();
     // });
-    card3.addEventListener("mouseenter", () => {
-      tl.play();
-    });
+    // card3.addEventListener("mouseenter", () => {
+    //   tl.play();
+    // });
     // card3.addEventListener("mouseleave", () => {
     //   tl.reverse();
     // });
