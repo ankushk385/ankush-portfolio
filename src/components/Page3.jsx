@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./css/page3.css";
-import img from "./images/bg1.jpg";
+import img from "./images/logo.gif";
 import { TimelineLite, Power2 } from "gsap";
 import CSSRulePluglin from "gsap/CSSRulePlugin";
 function Page3() {
