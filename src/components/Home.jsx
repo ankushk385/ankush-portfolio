@@ -57,9 +57,9 @@ function Home() {
     <>
       <div className="container">
         <div className="wrapper">
-          <div id="stars"></div>
+          {/* <div id="stars"></div>
           <div id="stars2"></div>
-          <div id="stars3"></div>
+          <div id="stars3"></div> */}
 
           <div className="page1" data-aos="fade-in">
             <div className="logo">

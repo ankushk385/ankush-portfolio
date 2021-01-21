@@ -82,6 +82,7 @@ a {
   align-items: center;
   border-radius: var(--border-radius);
   padding: 0.5rem;
+
   transition: background var(--speed);
 }
 .menu-item:hover {

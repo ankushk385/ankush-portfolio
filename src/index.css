@@ -17,8 +17,46 @@
 .container {
   height: 100%;
   overflow: hidden;
-  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
-  background-color: #242526;
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);  */
+  /* /* background-image: url("./components/images/bg1.jpg"); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  */
+  /* background-color: #242526; */
+  background-color: #31204a;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8) 100px,
+      transparent 30px,
+      transparent 120px
+    ),
+    repeating-linear-gradient(
+      -125deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 17px,
+      transparent 10px,
+      transparent 130px
+    );
+  animation: colorChange 10s infinite alternate ease-in;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #31204a;
+  }
+  30% {
+    background-color: #cf2562;
+  }
+  60% {
+    background-color: #00acee;
+  }
+  90% {
+    background-color: #242526;
+  }
+  100% {
+    background-color: black;
+  }
 }
 /* page 1 div */
 .page1 {

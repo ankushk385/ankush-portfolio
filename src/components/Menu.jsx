@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./css/Menu.css";
-import { ReactComponent as ServicesIcon } from "./images/services.svg";
-import { ReactComponent as AboutIcon } from "./images/about.svg";
-import { ReactComponent as ProjectsIcon } from "./images/projects.svg";
-import { ReactComponent as ContactIcon } from "./images/contact.svg";
+// import { ReactComponent as ServicesIcon } from "./images/services.svg";
+// import { ReactComponent as AboutIcon } from "./images/about.svg";
+// import { ReactComponent as ProjectsIcon } from "./images/projects.svg";
+// import { ReactComponent as ContactIcon } from "./images/contact.svg";
 function Menu() {
   return <></>;
 }
@@ -38,19 +38,19 @@ function DropdownMenu() {
       <>
         <div className="menu-buttons">
           <button href="#" className="menu-item">
-            <span className="icon-button">{props.abouticon}</span>
+            {/* <span className="icon-button">{props.abouticon}</span> */}
             {props.about}
           </button>
           <button href="#" className="menu-item">
-            <span className="icon-button">{props.servicesicon}</span>
+            {/* <span className="icon-button">{props.servicesicon}</span> */}
             {props.services}
           </button>
           <button href="#" className="menu-item">
-            <span className="icon-button">{props.projectsicon}</span>
+            {/* <span className="icon-button">{props.projectsicon}</span> */}
             {props.projects}
           </button>
           <button href="#" className="menu-item">
-            <span className="icon-button">{props.contacticon}</span>
+            {/* <span className="icon-button">{props.contacticon}</span> */}
             {props.contact}
           </button>
         </div>
@@ -65,10 +65,10 @@ function DropdownMenu() {
         contact="Contact Me"
         services="Services"
         projects="My Projects"
-        abouticon={<AboutIcon />}
-        servicesicon={<ServicesIcon />}
-        projectsicon={<ProjectsIcon />}
-        contacticon={<ContactIcon />}
+        // abouticon={<AboutIcon />}
+        // servicesicon={<ServicesIcon />}
+        // projectsicon={<ProjectsIcon />}
+        // contacticon={<ContactIcon />}
       ></DropdownMenuItems>
     </div>
   );
