@@ -62,7 +62,7 @@
 .page1 {
   margin: 0 auto;
   margin-top: 13px;
-  width: 80%;
+  width: 90%;
   height: 922px;
 
   background-image: linear-gradient(0deg, #cf2562, #00acee);
@@ -183,7 +183,7 @@
 .page2 {
   top: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   height: 922px;
   background-image: linear-gradient(0deg, #00acee, #cf2562);
   position: relative;

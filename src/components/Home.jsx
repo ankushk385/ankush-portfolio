@@ -6,7 +6,7 @@ import "../App.css";
 import { Navbar, NavItem, DropdownMenu } from "./Menu";
 import Page3 from "./Page3";
 import Page4 from "./Page4";
-import logo from "./images/logo2.gif";
+import logo from "./images/applogo.gif";
 import frontEnd from "./images/frontEnd2.gif";
 import backEnd from "./images/backEnd2.gif";
 
